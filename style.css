@@ -1,0 +1,136 @@
+/* DEBUG */
+/* * {
+    background-color: black !important;
+    color: black !important;
+    border: 2px solid red !important;
+} */
+
+/* Sets basic Navigation bar color and position */
+/* Remove any formatting */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+nav {
+  position: relative;
+  background-color: #2f2f2f;
+  padding: 10px;
+}
+.navbarlist {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+/* Changes navigation bar color and removes underline */
+.navbarlist a {
+  text-decoration: none;
+  color: #c4b79e;
+  padding: 0 10px 0 10px;
+}
+.navbarlist a:hover {
+  color: white;
+}
+.navbarlist .active {
+  color: white;
+  pointer-events: none;
+}
+/* ----------------------------------------------------------- */
+/* Position Hero image and apply effects */
+hero {
+  position: relative;
+  height: 100vh;
+  z-index: -100;
+  background-image: url(assets/hotel.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: brightness(70%);
+}
+/* Position company name and slogan on top of image and position */
+#companyname,
+#companyslogan {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: black 2px 2px 2px;
+  color: #877257;
+  margin-top: 10px;
+  font-family: "Playwrite CU", cursive;
+}
+/* Better Position and size Slogan */
+#companyslogan {
+  margin-top: 150px;
+  font-size: clamp(1rem, 2vw, 8rem);
+}
+/* ------------------------------------------------------------------- */
+/* Size and position image in body */
+#WaterImage {
+  height: 500px;
+  display: inline-flex;
+  float: left;
+  margin-right: 10px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+/* Add spacing between company and slogan */
+#companyname {
+  font-size: clamp(3rem, 6vw, 10rem);
+  position: scroll;
+  white-space: nowrap;
+}
+/* Apply padding to left and right of text */
+main {
+  background-color: #ddcdb3;
+  padding: 2.5vh 10vw;
+  text-align: left;
+}
+/* Adjust font size of About Us heading */
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+/* Adjust in text heading */
+h4 {
+  font-size: clamp(1rem, 4vw, 8rem);
+  margin: 10px;
+}
+p {
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(1rem, 1vw, 2rem);
+}
+h3,
+h4 {
+  font-family: "Playwrite CU", cursive;
+}
+#WaterImage:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+/* ----------------------------------------------------------- */
+@media (orientation: portrait) {
+  hero {
+    background-attachment: scroll;
+  }
+  #companyname,
+  #companyslogan {
+    white-space: normal;
+  }
+  #companyslogan {
+    margin-top: 170px;
+  }
+  main img {
+    max-width: 100vw;
+    margin: 0px;
+  }
+  main {
+    padding: 0vw;
+  }
+}
